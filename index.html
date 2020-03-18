@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/videojs-flash/dist/videojs-flash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.7.3/video.js"></script>
+    <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.7.3/video-js.css" rel="stylesheet">
+</head>
+<body style="background-color:grey;  color:white;">
+  <div style="justify-content: center; align-items: center; text-align: center;">
+    <h2>HLS player</h2>
+    <video style="margin: 0 auto; width: 600px; " id=video-player width=600 height=300 class="video-js vjs-default-skin" controls>
+    </video>
+    <div style="margin: 1.5em;">
+      <input type="text" style="padding: 0.5em 16em 0.5em 0.5em;" class="form-control" id="player-src" value="" placeholder="https://192.168.1.63/live/hello/index.m3u8" required>
+      <button style="padding: 0.5em 2em 0.5em 2em;" type="submit" class="btn btn-success" id="player-start">Play</button>
+  </div>
+  </div>
+
+  <h4>HLS</h4>
+  <p>HTTP Live Streaming (HLS) is an HTTP-based media streaming
+  communications protocol implemented by Apple Inc. as part of its
+  QuickTime, Safari, OS X, and iOS software. It works by breaking the
+  overall stream into a sequence of small HTTP-based file downloads,
+  each download loading one short chunk of an overall potentially
+  unbounded transport stream.</p>
+  <h4 class="margin-top-30">M3U8</h4>
+  <p>M3U8 is a computer file format that contains multimedia
+  playlists. A m3u8 file specifies the locations of one or more media
+  files, rather than the video itself. Therefore, a HLS player is
+  required to download and play the actual video files.</p>
+  <script>
+      var player = videojs('video-player');
+      player.src({
+          src: './bunny.mp4',
+          type: 'video/mp4',
+          withCredentials: true
+          });
+      player.play();
+  </script>
+</body>
+</html>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
+
