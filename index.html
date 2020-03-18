@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>HLS Video Player</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/videojs-flash/dist/videojs-flash.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.7.3/video.js"></script>
@@ -12,7 +12,7 @@
 <body style="background-color:grey;  color:white;">
   <div style="justify-content: center; align-items: center; text-align: center;">
     <h2>HLS player</h2>
-    <video style="margin: 0 auto; width: 600px; " id=video-player width=600 height=300 class="video-js vjs-default-skin" controls>
+    <video style="margin: 0 auto; width: 500px; " id=video-player width=600 height=500 class="video-js vjs-default-skin" controls>
     </video>
     <div style="margin: 1.5em;">
       <input type="text" style="padding: 0.5em 16em 0.5em 0.5em;" class="form-control" id="player-src" value="" placeholder="https://192.168.1.63/live/hello/index.m3u8" required>
@@ -35,8 +35,8 @@
   <script>
       var player = videojs('video-player');
       player.src({
-          src: 'https://192.168.1.63/live/hello/index.m3u8',
-          type: 'application/x-mpegURL',
+          src: './bunny.mp4',
+          type: 'video/mp4',
           withCredentials: true
           });
       player.play();
